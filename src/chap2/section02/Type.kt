@@ -6,7 +6,11 @@ package chap2.section02
  * - 다만 kotlin compiler 내부에서 reference type 을 primitive type 으로 변환해준다.
  *
  * 2. 자동으로 형변환을 진행 해 준다.
+ *
+ * 3. 타입에 별명을 붙여 사용 할 수 있다.
  */
+typealias UserName = String
+
 fun main() {
 
     // 1. 자동 형변환
@@ -31,4 +35,8 @@ fun main() {
     // 5. 각 자료형의 최대/최소 값
     val intMin = Int.MIN_VALUE
     val intMax = Int.MAX_VALUE
+
+    // 6. 특정 자료형에 별명 붙이기
+    val name: UserName = "ted"
+
 }
