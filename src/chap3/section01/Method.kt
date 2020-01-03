@@ -1,4 +1,4 @@
-package chap3
+package chap3.section01
 
 /**
  * [Method]
@@ -31,10 +31,11 @@ fun main() {
 //    namedParam("someone")
 
     // 4. variable arguments
-    variableArgument(1)
-    variableArgument(1,3,5)
-    variableArgument(2,4,6,8,10)
-    // variableArguments2(1,3,5,7,9, "Ted")
+    variableArguments(1)
+    variableArguments(1, 3, 5)
+    variableArguments(2, 4, 6, 8, 10)
+    variableArguments2(2, 4, 6, 8, 10, name = "Ted")
+    variableArguments3("Ted", 1, 2, 3, 4, 5)
 }
 
 /**
@@ -80,16 +81,30 @@ fun namedParam(name: String, part: String = "probie") {
  * (동일한 자료형만 들어온가는 가정하에) 가변적으로 인자를 받을 수 있다.
  * 'vararg' 심볼을 통해 특정 자료형을 가변 인자로 받을 수 있다.
  */
-fun variableArgument(vararg nums: Int) {
-    for(num in nums) {
+fun variableArguments(vararg nums: Int) {
+    for (num in nums) {
         print("$num ")
     }
     println()
 }
 
 fun variableArguments2(vararg nums: Int, name: String) {
-    // Q) 위와 같이 가변인자와 아예 다른 매개변수가 함께 선언이 된다면?
-    // A) 가변인수를 사용하고 싶다면, 다른 매개변수는 함께 선언할 수 없다. 따라서, 위와 같은 형태는 불가능한 형태이다.
+    // Q) 위와 같이 가변인자와 다음에 다른 매개변수가 함께 선언이 된다면?
+    // A) 일반적으로는 사용할 수 없다. 하지만, 함수호출 시, 매개변수명과 함께 사용한다면 호출 가능하다.
+    print("[variableArguments2] name = $name / ")
+    for (num in nums) {
+        print("$num ")
+    }
+    println()
+}
+
+fun variableArguments3(name: String, vararg nums: Int) {
+    // A) 위와같이 고정매개변수를 우선적으로 선언하고, 가변인자를 선언하면 이용 가능하다.
+    print("[variableArguments3] name = $name / ")
+    for (num in nums) {
+        print("$num ")
+    }
+    println()
 }
 
 
