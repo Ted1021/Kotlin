@@ -22,8 +22,9 @@ fun main() {
 //    println("result of getSum = ${getSum(2,3)}")
 
     // 2. default params
-//    defaultParams("ted", null) // default 값이 지정된 매개변수에 null 삽입해보기
-//    defaultParams("alice")
+    defaultParams("ted", null) // default 값이 지정된 매개변수에 null 삽입해보기
+    defaultParams("alice")
+    defaultParams("mike")
 
     // 3. named params
 //    namedParam(name = "ted", part = "android")
@@ -31,11 +32,11 @@ fun main() {
 //    namedParam("someone")
 
     // 4. variable arguments
-    variableArguments(1)
-    variableArguments(1, 3, 5)
-    variableArguments(2, 4, 6, 8, 10)
-    variableArguments2(2, 4, 6, 8, 10, name = "Ted")
-    variableArguments3("Ted", 1, 2, 3, 4, 5)
+//    variableArguments(1)
+//    variableArguments(1, 3, 5)
+//    variableArguments(2, 4, 6, 8, 10)
+//    variableArguments2(2, 4, 6, 8, 10, name = "Ted")
+//    variableArguments3("Ted", 1, 2, 3, 4, 5)
 }
 
 /**
@@ -60,6 +61,10 @@ fun defaultParams(name: String, email: String? = "none") {
     // Q) null 이 들어왔을때에도 기본값이 매핑이 될까??
     // A) 안됨. 그냥 null 이 들어와버림 따라서, '?:' 심볼로 null 처리를 따로 해주어야 함.
     println("name = $name / email = ${email ?: "none"}")
+}
+
+fun defaultParams(name: String) {
+    println("overloading? | name = $name")
 }
 
 /**
