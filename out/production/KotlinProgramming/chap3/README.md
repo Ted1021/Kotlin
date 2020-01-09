@@ -131,7 +131,7 @@ fun test(sum: (Int, Int -> Int), x: Int, y: Int): Int = sum(x, y)
 - 람다식의 경우, 기존에 사용해 오던 CallByValue 형태의 호출 뿐만아니라, CallByName 형태로 호출 할 수 있다.
 - 두 호출 방식은 서로 다르게 동작하므로 주의해야 한다.
 
-
+<br>
 
 ### 5. 참조에 의한 외부함수 호출
 
