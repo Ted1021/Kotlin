@@ -1,4 +1,4 @@
-package chap5.section01
+package chap5.section03
 
 // [다형성]
 // 기본적으로 JAVA 의 abstract 키워드가 Kotlin 의 open 과 동일하다.

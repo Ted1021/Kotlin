@@ -1,4 +1,4 @@
-package chap5.section01
+package chap5.section03
 
 // 상속
 // JAVA 와 달리, 상속가능한 클래스를 만들기 위해서는 'open' 키워드를 붙여주어야 한다.

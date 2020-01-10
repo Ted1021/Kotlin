@@ -1,4 +1,4 @@
-package chap5.section01
+package chap5.section02
 
 // 주 생성자 위치
 // 주 생성자에 클래스에 필요한 프로퍼티를 설정 할 수 있음.
