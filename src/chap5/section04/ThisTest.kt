@@ -12,7 +12,7 @@ open class Person {
 
 class Developer: Person {
     constructor(firstName: String): this(firstName, 10) {
-        println("[developer] $firstName, $this.age")
+        println("[developer] $firstName")
     }
 
     constructor(firstName: String, age: Int): super(firstName, age) {
