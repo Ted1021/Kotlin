@@ -1,3 +1,5 @@
+package chap5.section04
+
 open class Person {
     constructor(firstName: String) {
         println("[person] firstName: $firstName")
@@ -10,7 +12,7 @@ open class Person {
 
 class Developer: Person {
     constructor(firstName: String): this(firstName, 10) {
-        println("[developer] $firstName, $age")
+        println("[developer] $firstName, $this.age")
     }
 
     constructor(firstName: String, age: Int): super(firstName, age) {
