@@ -12,6 +12,8 @@ fun main() {
     val pc = PrivateClass()
     // pc.i 접근 불가
     pc.privateAccess() // privateFunc 접근 불가
+
+    val internal = InternalClass()
 }
 
 private class PrivateClass {
