@@ -9,7 +9,7 @@ class Person {
     lateinit var name: String
 
     fun test() {
-        if(::name.isInitialized) {
+        if (::name.isInitialized) {
             println("Initialized")
         } else {
             println("is not initialized")
@@ -17,10 +17,16 @@ class Person {
     }
 }
 
+// 클래스 또한 lateinit 이 가능하다.
+lateinit var person2: Person
+
 fun main() {
     val person = Person()
     person.test()
 
     person.name = "TED"
     person.test()
+
+    person2 = Person()
+    person2.test()
 }
