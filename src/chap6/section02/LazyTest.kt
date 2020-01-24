@@ -4,6 +4,11 @@ package chap6.section02
  * [by lazy]
  * val 로 선언된 프로퍼티/객체에 대해 지연 초기화를 사용 할 수 있다.
  * 초기화될 값은 'by lazy' 를 통해 이미 정해져 있고, 설정된 프로퍼티나 객체를 접근하는시점에 초기화가 진행된다.
+ *
+ * # mode
+ * 1. synchronized : lock 을 이용해 단일스레드만 사용 가능 (default)
+ * 2. publication  : 여러군데에서호출 될 수 있으나, 처음 초기화된 이후에는 초기회된 값을 반환한다
+ * 3. none         : lock 을 걸지 않기 떄문에 속도는 빠르지만, 무결성을 보장할 수 없다.
  */
 class LazyTest {
     init {
