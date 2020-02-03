@@ -2,6 +2,7 @@ package chap6.section04
 
 class Hobby(val name: String)
 
+// Object 선언
 object OCustomer {
     var name = "TED"
     val HOBBY = Hobby("BasketBall")
