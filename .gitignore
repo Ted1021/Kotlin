@@ -10,7 +10,7 @@
 /ideaSDK
 /clionSDK
 /android-studio/sdk
-out/
+out\
 /tmp
 workspace.xml
 *.versionsBackup
@@ -57,3 +57,4 @@ node_modules/
 libraries/tools/kotlin-test-js-runner/lib/
 libraries/tools/kotlin-source-map-loader/lib/
 local.properties
+out/
