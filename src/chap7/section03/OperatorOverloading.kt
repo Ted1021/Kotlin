@@ -1,4 +1,4 @@
-package chap7.section02
+package chap7.section03
 
 class Point(var x: Int = 0, var y: Int = 10) {
     // 기존 +연산자를 overloading
