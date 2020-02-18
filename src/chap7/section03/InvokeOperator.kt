@@ -20,4 +20,9 @@ fun main() {
     val manager = Manager()
     manager("invoke operator test")
     manager("overloading test", 109)
+
+    // 람다식은 기본적으로 invoke 가 적용된 operator 라고 볼 수 있다.
+    val sum = {x: Int, y: Int -> x + y}
+    println("result(invoke) : ${sum.invoke(3, 10)}")
+    println("result : ${sum(3, 10)}")
 }
