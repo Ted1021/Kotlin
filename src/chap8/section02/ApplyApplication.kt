@@ -3,8 +3,9 @@ package chap8.section02
 import java.util.*
 
 fun main() {
-    plusAndSlice()
-    etc()
+//    plusAndSlice()
+//    etc()
+    iterator()
 }
 
 fun plusAndSlice() {
@@ -29,4 +30,18 @@ fun etc() {
     println("count : ${arr1.count()}")
     println("have 4? : ${arr1.contains(4)}")
     println("have 4? : ${4 in arr1}")
+}
+
+fun iterator() {
+    val arr = arrayOf(1,2,3,4,5)
+    arr.forEach { element -> println("$element") }
+    arr.forEachIndexed { index, element ->
+        println("index : $index")
+        println("element : $element")
+    }
+
+    val iter: Iterator<Int> = arr.iterator()
+    while(iter.hasNext()) {
+        println("${iter.next()}")
+    }
 }
