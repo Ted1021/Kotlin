@@ -3,7 +3,8 @@ package chap8.section02
 import java.util.*
 
 fun main() {
-
+    plusAndSlice()
+    etc()
 }
 
 fun plusAndSlice() {
@@ -18,4 +19,14 @@ fun plusAndSlice() {
     println("arr2 : ${Arrays.toString(arr2)}")
     val arr3 = arr1.sliceArray(0..3)
     println("arr3 : ${Arrays.toString(arr3)}")
+}
+
+fun etc() {
+    val arr1 = arrayOf(1,2,3,4,5)
+    println(arr1.first())
+    println(arr1.last())
+    println("average : ${arr1.average()}")
+    println("count : ${arr1.count()}")
+    println("have 4? : ${arr1.contains(4)}")
+    println("have 4? : ${4 in arr1}")
 }
